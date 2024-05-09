@@ -2,6 +2,7 @@
 #include "utils/datamodel/DataModel.hpp"
 #include "driver/driver.hpp"
 #include "Roblox/TeleportHandler.hpp"
+#include "Roblox/Cheat.hpp"
 
 int main() {
 
@@ -26,30 +27,22 @@ int main() {
         exit(0);
     }
 
-    std::cout << std::hex << "[debug] RBX::RenderView ->  0x" << pDataModel->get_render_view() << std::endl;
-    std::cout << std::hex << "[debug] RBX::VisualEngine -> 0x" << pDataModel->get_visualengine_address() << std::endl;
-
     auto Datamodel = static_cast<RobloxInstance>(pDataModel->get_datamodel());
 
-    std::cout << "[debug] RBX::DataModel -> 0x" << Datamodel.self<< std::endl;
+    std::cout << std::hex << "[debug] RBX::RenderView ->  0x" << pDataModel->get_render_view() << std::endl;
+    std::cout << std::hex << "[debug] RBX::VisualEngine -> 0x" << pDataModel->get_visualengine_address() << std::endl;
+    std::cout << std::hex << "[debug] RBX::DataModel -> 0x" << Datamodel.self<< std::endl;
 
     const auto pTeleportHandler{TeleportHandler::get_singleton()};
+    const auto pCheat{Cheat::get_singleton()};
 
+    // Teleport Handler
     pTeleportHandler->initialize(Datamodel.self);
-
     pTeleportHandler->handle_teleports();
 
-    auto Players = Datamodel.find_first_child("Players");
-
-    auto LocalPlayer = Players.get_local_player();
-
-    std::cout << "[debug] LocalPlayer: 0x" << LocalPlayer.self  << " -> " << LocalPlayer.name() << std::endl;
-
-    LocalPlayer.set_humanoid_walkspeed(120);
-
-    std::cout << "[debug] Walkspeed set to 120" << std::endl;
-
-    std::cout << "[debug] Health -> " << LocalPlayer.get_health() << std::endl;
+    // Cheat
+    pCheat->set_datamodel(Datamodel.self);
+    pCheat->initialize();
 
     std::cin.get();
 

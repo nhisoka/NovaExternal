@@ -6,6 +6,7 @@
 #include <thread>
 #include "../utils/datamodel/DataModel.hpp"
 #include "TeleportHandler.hpp"
+#include "Cheat.hpp"
 
 TeleportHandler *TeleportHandler::g_Singleton = nullptr;
 
@@ -28,13 +29,16 @@ void TeleportHandler::handle_teleports() {
         std::thread([this] {
             while (true) {
                 auto pDatamodel{DataModel::get_singleton()};
+                auto pCheat{Cheat::get_singleton()};
                 auto current_datamodel = static_cast<RobloxInstance>(pDatamodel->get_datamodel());
 
                 if(this->datamodel != current_datamodel.self && current_datamodel.get_gameid() != 0) {
                     this->datamodel = current_datamodel.self; // set the teleport handler datamodel to the new one so it doesnt detect it as new teleport
+                    pCheat->set_datamodel(this->datamodel);
+                    pCheat->initialize();
+
                     std::cout << "[debug] Teleport detected" << std::endl;
 
-                    std::cout << std::hex << "New Datamodel -> 0x" << current_datamodel.self << std::endl;
                 } else if(current_datamodel.get_gameid() == 0) {
                     std::cout << "[debug] Not ingame" << std::endl;
                 }

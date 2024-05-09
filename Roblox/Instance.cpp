@@ -192,7 +192,10 @@ float RobloxInstance::get_health()
 
     if (humanoid_instance.self) {
         return pDriver->read<float>(humanoid_instance.self + offsets::health);
+    } else {
+        std::cout << "hell nah"  << std::endl;
     }
+
     return 0;
 }
 
