@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\NovaExternal.dir\\utils\\logs\\LogInterceptor.cpp.obj",
+            "outputs": [
+                "CMakeFiles\\NovaExternal.dir\\utils\\logs\\LogInterceptor.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

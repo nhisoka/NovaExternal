@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\NovaExternal.dir\\driver\\Driver.cpp.obj",
+            "outputs": [
+                "CMakeFiles\\NovaExternal.dir\\driver\\Driver.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

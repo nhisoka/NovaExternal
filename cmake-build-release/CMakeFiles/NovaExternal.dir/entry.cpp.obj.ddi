@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\NovaExternal.dir\\entry.cpp.obj",
+            "outputs": [
+                "CMakeFiles\\NovaExternal.dir\\entry.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

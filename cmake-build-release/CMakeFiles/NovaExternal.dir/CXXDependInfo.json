@@ -1,0 +1,18 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Release",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "C:/Users/user/CLionProjects/NovaExternal/cmake-build-release",
+	"dir-cur-src" : "C:/Users/user/CLionProjects/NovaExternal",
+	"dir-top-bld" : "C:/Users/user/CLionProjects/NovaExternal/cmake-build-release",
+	"dir-top-src" : "C:/Users/user/CLionProjects/NovaExternal",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/user/CLionProjects/NovaExternal/cmake-build-release/CMakeFiles/NovaExternal.dir"
+}

@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\NovaExternal.dir\\Roblox\\Instance.cpp.obj",
+            "outputs": [
+                "CMakeFiles\\NovaExternal.dir\\Roblox\\Instance.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}
