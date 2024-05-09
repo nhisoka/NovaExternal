@@ -9,3 +9,5 @@ build CMakeFiles\NovaExternal.dir\driver\Driver.cpp.obj: dyndep
 
 build CMakeFiles\NovaExternal.dir\Roblox\Instance.cpp.obj: dyndep
 
+build CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj: dyndep
+

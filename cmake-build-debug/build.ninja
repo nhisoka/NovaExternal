@@ -129,7 +129,23 @@ build CMakeFiles\NovaExternal.dir\Roblox\Instance.cpp.obj: CXX_COMPILER__NovaExt
   TARGET_PDB = NovaExternal.pdb
   dyndep = CMakeFiles/NovaExternal.dir/CXX.dd
 
-build CMakeFiles\NovaExternal.dir\CXX.dd | C$:\Users\user\CLionProjects\NovaExternal\cmake-build-debug\CMakeFiles\NovaExternal.dir\CXXModules.json CMakeFiles\NovaExternal.dir\entry.cpp.obj.modmap CMakeFiles\NovaExternal.dir\utils\logs\LogInterceptor.cpp.obj.modmap CMakeFiles\NovaExternal.dir\utils\datamodel\DataModel.cpp.obj.modmap CMakeFiles\NovaExternal.dir\driver\Driver.cpp.obj.modmap CMakeFiles\NovaExternal.dir\Roblox\Instance.cpp.obj.modmap: CXX_DYNDEP__NovaExternal_Debug CMakeFiles\NovaExternal.dir\entry.cpp.obj.ddi CMakeFiles\NovaExternal.dir\utils\logs\LogInterceptor.cpp.obj.ddi CMakeFiles\NovaExternal.dir\utils\datamodel\DataModel.cpp.obj.ddi CMakeFiles\NovaExternal.dir\driver\Driver.cpp.obj.ddi CMakeFiles\NovaExternal.dir\Roblox\Instance.cpp.obj.ddi
+build CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj.ddi: CXX_SCAN__NovaExternal_Debug C$:\Users\user\CLionProjects\NovaExternal\Roblox\TeleportHandler.cpp || cmake_object_order_depends_target_NovaExternal
+  DEP_FILE = CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj.ddi
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
+  OBJ_FILE = CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj.ddi.i
+
+build CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj: CXX_COMPILER__NovaExternal_scanned_Debug C$:\Users\user\CLionProjects\NovaExternal\Roblox\TeleportHandler.cpp || cmake_object_order_depends_target_NovaExternal CMakeFiles\NovaExternal.dir\CXX.dd CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj.modmap
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj.modmap
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
+  OBJECT_DIR = CMakeFiles\NovaExternal.dir
+  OBJECT_FILE_DIR = CMakeFiles\NovaExternal.dir\Roblox
+  TARGET_COMPILE_PDB = CMakeFiles\NovaExternal.dir\
+  TARGET_PDB = NovaExternal.pdb
+  dyndep = CMakeFiles/NovaExternal.dir/CXX.dd
+
+build CMakeFiles\NovaExternal.dir\CXX.dd | C$:\Users\user\CLionProjects\NovaExternal\cmake-build-debug\CMakeFiles\NovaExternal.dir\CXXModules.json CMakeFiles\NovaExternal.dir\entry.cpp.obj.modmap CMakeFiles\NovaExternal.dir\utils\logs\LogInterceptor.cpp.obj.modmap CMakeFiles\NovaExternal.dir\utils\datamodel\DataModel.cpp.obj.modmap CMakeFiles\NovaExternal.dir\driver\Driver.cpp.obj.modmap CMakeFiles\NovaExternal.dir\Roblox\Instance.cpp.obj.modmap CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj.modmap: CXX_DYNDEP__NovaExternal_Debug CMakeFiles\NovaExternal.dir\entry.cpp.obj.ddi CMakeFiles\NovaExternal.dir\utils\logs\LogInterceptor.cpp.obj.ddi CMakeFiles\NovaExternal.dir\utils\datamodel\DataModel.cpp.obj.ddi CMakeFiles\NovaExternal.dir\driver\Driver.cpp.obj.ddi CMakeFiles\NovaExternal.dir\Roblox\Instance.cpp.obj.ddi CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj.ddi
 
 
 # =============================================================================
@@ -139,7 +155,7 @@ build CMakeFiles\NovaExternal.dir\CXX.dd | C$:\Users\user\CLionProjects\NovaExte
 #############################################
 # Link the executable NovaExternal.exe
 
-build NovaExternal.exe: CXX_EXECUTABLE_LINKER__NovaExternal_Debug CMakeFiles\NovaExternal.dir\entry.cpp.obj CMakeFiles\NovaExternal.dir\utils\logs\LogInterceptor.cpp.obj CMakeFiles\NovaExternal.dir\utils\datamodel\DataModel.cpp.obj CMakeFiles\NovaExternal.dir\driver\Driver.cpp.obj CMakeFiles\NovaExternal.dir\Roblox\Instance.cpp.obj
+build NovaExternal.exe: CXX_EXECUTABLE_LINKER__NovaExternal_Debug CMakeFiles\NovaExternal.dir\entry.cpp.obj CMakeFiles\NovaExternal.dir\utils\logs\LogInterceptor.cpp.obj CMakeFiles\NovaExternal.dir\utils\datamodel\DataModel.cpp.obj CMakeFiles\NovaExternal.dir\driver\Driver.cpp.obj CMakeFiles\NovaExternal.dir\Roblox\Instance.cpp.obj CMakeFiles\NovaExternal.dir\Roblox\TeleportHandler.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console /MANIFESTUAC:"level='requireAdministrator' uiAccess='false'" /SUBSYSTEM:CONSOLE
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
