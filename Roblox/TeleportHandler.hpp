@@ -6,12 +6,12 @@
 
 class TeleportHandler {
     static TeleportHandler *g_Singleton;
+    std::uint64_t datamodel;
+    bool isInitialized;
 
 public:
     static TeleportHandler *get_singleton() noexcept;
 
-    std::uint64_t datamodel;
-    bool isInitialized;
 
     void initialize(std::uint64_t dataModel);
 

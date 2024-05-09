@@ -33,6 +33,10 @@ void TeleportHandler::handle_teleports() {
                 if(this->datamodel != current_datamodel.self && current_datamodel.get_gameid() != 0) {
                     this->datamodel = current_datamodel.self; // set the teleport handler datamodel to the new one so it doesnt detect it as new teleport
                     std::cout << "[debug] Teleport detected" << std::endl;
+
+                    std::cout << std::hex << "New Datamodel -> 0x" << current_datamodel.self << std::endl;
+                } else if(current_datamodel.get_gameid() == 0) {
+                    std::cout << "[debug] Not ingame" << std::endl;
                 }
 
                 std::this_thread::sleep_for(std::chrono::seconds(2));

@@ -15,6 +15,8 @@ add_executable(NovaExternal entry.cpp
         offsets.hpp
         Roblox/Instance.hpp
         Roblox/TeleportHandler.cpp
-        Roblox/TeleportHandler.hpp)
+        Roblox/TeleportHandler.hpp
+        Roblox/Cheat.cpp
+        Roblox/Cheat.hpp)
 
 SET_TARGET_PROPERTIES(NovaExternal PROPERTIES LINK_FLAGS "/MANIFESTUAC:\"level='requireAdministrator' uiAccess='false'\" /SUBSYSTEM:CONSOLE")
