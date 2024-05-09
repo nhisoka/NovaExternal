@@ -9,4 +9,11 @@ class TeleportHandler {
 
 public:
     static TeleportHandler *get_singleton() noexcept;
+
+    std::uint64_t datamodel;
+    bool isInitialized;
+
+    void initialize(std::uint64_t dataModel);
+
+    void handle_teleports();
 };

@@ -12,8 +12,8 @@ add_executable(NovaExternal entry.cpp
         driver/Driver.hpp
         driver/librarys.hpp
         Roblox/Instance.cpp
-        Roblox/Instance.hpp
         offsets.hpp
+        Roblox/Instance.hpp
         Roblox/TeleportHandler.cpp
         Roblox/TeleportHandler.hpp)
 

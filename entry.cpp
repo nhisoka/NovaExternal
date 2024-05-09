@@ -1,6 +1,7 @@
 #include <iostream>
 #include "utils/datamodel/DataModel.hpp"
 #include "driver/driver.hpp"
+#include "Roblox/TeleportHandler.hpp"
 
 int main() {
 
@@ -31,6 +32,12 @@ int main() {
     auto Datamodel = static_cast<RobloxInstance>(pDataModel->get_datamodel());
 
     std::cout << "[debug] RBX::DataModel -> 0x" << Datamodel.self<< std::endl;
+
+    const auto pTeleportHandler{TeleportHandler::get_singleton()};
+
+    pTeleportHandler->initialize(Datamodel.self);
+
+    pTeleportHandler->handle_teleports();
 
     auto Players = Datamodel.find_first_child("Players");
 
