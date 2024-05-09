@@ -1,0 +1,14 @@
+//
+// Created by user on 5/9/2024.
+//
+
+#ifndef NOVAEXTERNAL_TELEPORTHANDLER_HPP
+#define NOVAEXTERNAL_TELEPORTHANDLER_HPP
+
+
+class TeleportHandler {
+
+};
+
+
+#endif //NOVAEXTERNAL_TELEPORTHANDLER_HPP
