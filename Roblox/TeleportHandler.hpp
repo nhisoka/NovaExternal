@@ -2,13 +2,11 @@
 // Created by user on 5/9/2024.
 //
 
-#ifndef NOVAEXTERNAL_TELEPORTHANDLER_HPP
-#define NOVAEXTERNAL_TELEPORTHANDLER_HPP
-
+#include <cstdint>
 
 class TeleportHandler {
+    static TeleportHandler *g_Singleton;
 
+public:
+    static TeleportHandler *get_singleton() noexcept;
 };
-
-
-#endif //NOVAEXTERNAL_TELEPORTHANDLER_HPP
