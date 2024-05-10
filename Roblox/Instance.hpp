@@ -9,12 +9,13 @@
 #include "../offsets.hpp"
 
 class RobloxInstance {
+public:
+    std::uint64_t self;
+
     struct vector2_t final { float x, y; };
     struct vector3_t final { float x, y, z; };
     struct quaternion final { float x, y, z, w; };
     struct matrix4_t final { float data[16]; };
-public:
-    std::uint64_t self;
 
     std::string name();
     std::string class_name();
@@ -25,10 +26,14 @@ public:
     RobloxInstance get_model_instance();
     RobloxInstance get_team();
 
+    void set_cframe(vector3_t coords);
+    vector3_t get_cframe();
+
     std::uintptr_t get_gameid();
 
     RobloxInstance get_workspace();
     RobloxInstance get_current_camera();
+
 
     vector2_t get_dimensions();
     matrix4_t get_view_matrix();

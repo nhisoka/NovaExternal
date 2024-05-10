@@ -17,6 +17,20 @@ add_executable(NovaExternal entry.cpp
         Roblox/TeleportHandler.cpp
         Roblox/TeleportHandler.hpp
         Roblox/Cheat.cpp
-        Roblox/Cheat.hpp)
+        Roblox/Cheat.hpp
+        utils/overlay/overlay.cpp
+        utils/overlay/overlay.hpp
+        globals.hpp)
 
 SET_TARGET_PROPERTIES(NovaExternal PROPERTIES LINK_FLAGS "/MANIFESTUAC:\"level='requireAdministrator' uiAccess='false'\" /SUBSYSTEM:CONSOLE")
+
+target_include_directories(NovaExternal PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/Dependencies")
+# Dependencies
+
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/imgui")
+
+target_link_libraries(${PROJECT_NAME}
+        PRIVATE
+        # Imgui
+        Imgui
+)

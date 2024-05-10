@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Cheat.hpp"
 #include "Instance.hpp"
+#include "../utils/overlay/overlay.hpp"
 #include <thread>
 
 Cheat *Cheat::g_Singleton = nullptr;
@@ -32,10 +33,18 @@ void Cheat::initialize() const {
 
     std::cout << "[debug] LocalPlayer: 0x" << LocalPlayer.self  << " -> " << LocalPlayer.name() << std::endl;
 
+    auto character = LocalPlayer.get_model_instance();
 
-    LocalPlayer.set_humanoid_walkspeed(120);
+    auto humanoidrootpart = character.find_first_child("HumanoidRootPart");
+
+    std::cout << humanoidrootpart.self << std::endl;
+
+   // LocalPlayer.set_humanoid_walkspeed(120);
 
     std::cout << "[debug] Walkspeed set to 120" << std::endl;
 
     std::cout << "[debug] Health -> " << LocalPlayer.get_health() << std::endl;
+
+    const auto pOverlay{Overlay::get_singleton()};
+    std::thread(pOverlay->render).detach();
 };

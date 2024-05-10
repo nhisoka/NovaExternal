@@ -103,6 +103,20 @@ RobloxInstance RobloxInstance::find_first_child(std::string child)
     return ret;
 }
 
+void RobloxInstance::set_cframe(vector3_t coords)
+{
+    if(this->self) {
+        pDriver->write<vector3_t>(this->self + offsets::cframe, coords);
+    }
+};
+
+RobloxInstance::vector3_t RobloxInstance::get_cframe()
+{
+    if(this->self) {
+        return pDriver->read<vector3_t>(this->self + offsets::cframe);
+    }
+}
+
 void RobloxInstance::set_humanoid_walkspeed(float value)
 {
     auto humanoid_instance = this->get_model_instance().find_first_child("Humanoid");
