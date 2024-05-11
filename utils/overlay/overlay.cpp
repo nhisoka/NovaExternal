@@ -626,6 +626,12 @@ void Overlay::cleanup_render_target()
         d3d11_render_target_view = nullptr;
     }
 }
+void Overlay::initialize()
+{
+    std::thread([this] {
+        this->render();
+    }).detach();
+}
 
 LRESULT __stdcall Overlay::window_proc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {

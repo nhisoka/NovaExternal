@@ -52,7 +52,7 @@ std::uint64_t DataModel::get_datamodel()
     auto render_view = this->get_render_view();
 
     auto game_ptr = pDriver->read<std::uint64_t>(render_view + 0x118);
-    std::uint64_t game = pDriver->read<std::uint64_t>(game_ptr + 0x198); // update
+    auto game = pDriver->read<std::uint64_t>(game_ptr + 0x198); // update
 
     return game;
 }

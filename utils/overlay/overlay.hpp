@@ -60,6 +60,8 @@ public:
 
     static bool render();
 
+    void initialize();
+
     static void move_window(HWND hw);
 
     static bool fullsc(HWND windowHandle);

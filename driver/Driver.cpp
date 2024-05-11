@@ -2,6 +2,7 @@
 // Created by user on 5/8/2024.
 //
 
+#include <string>
 #include "Driver.hpp"
 #include "librarys.hpp"
 
@@ -42,7 +43,9 @@ bool Driver::setup()
     if (!nt_user_function)
     {
         nt_user_function = reinterpret_cast<NtUserFunction>(GetProcAddress(librarys::win32u, "NtUserRegisterErrorReportingDialog"));
-        if (!nt_user_function) return false;
+        if (!nt_user_function) {
+            return false;
+        }
     }
     return true;
 }

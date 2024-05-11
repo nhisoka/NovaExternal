@@ -1,5 +1,6 @@
 #include <iostream>
 #include "utils/datamodel/DataModel.hpp"
+#include "utils/overlay/overlay.hpp"
 #include "driver/driver.hpp"
 #include "Roblox/TeleportHandler.hpp"
 #include "Roblox/Cheat.hpp"
@@ -9,10 +10,8 @@ int main() {
     const auto pDriver{Driver::get_singleton()};
     const auto pDataModel {DataModel::get_singleton()};
 
-    if(!pDriver->setup())
-    {
-        return false;
-    }
+
+    pDriver->setup();
 
     while (pDriver->process_id == 0)
     {
@@ -22,7 +21,7 @@ int main() {
     pDriver->base_address = pDriver->get_base_address();
     if (!pDriver->base_address)
     {
-        std::cout << "[+] Driver error" << std::endl;
+        std::cout << "[+] Driver not loaded" << std::endl;
         Sleep(3000);
         exit(0);
     }
@@ -35,6 +34,7 @@ int main() {
 
     const auto pTeleportHandler{TeleportHandler::get_singleton()};
     const auto pCheat{Cheat::get_singleton()};
+    const auto pOverlay{Overlay::get_singleton()};
 
     // Teleport Handler
     pTeleportHandler->initialize(Datamodel.self);
@@ -43,6 +43,9 @@ int main() {
     // Cheat
     pCheat->set_datamodel(Datamodel.self);
     pCheat->initialize();
+
+    // Overlay or gui how you wanna call it
+    pOverlay->initialize();
 
     std::cin.get();
 

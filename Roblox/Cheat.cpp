@@ -22,6 +22,7 @@ void Cheat::set_datamodel(std::uint64_t dataModel) {
 
 void Cheat::initialize() const {
     system("cls");
+
     auto Datamodel = static_cast<RobloxInstance>(this->datamodel);
 
     auto Players = Datamodel.find_first_child("Players");
@@ -37,7 +38,6 @@ void Cheat::initialize() const {
 
     auto humanoidrootpart = character.find_first_child("HumanoidRootPart");
 
-    std::cout << humanoidrootpart.self << std::endl;
 
    // LocalPlayer.set_humanoid_walkspeed(120);
 
@@ -45,6 +45,4 @@ void Cheat::initialize() const {
 
     std::cout << "[debug] Health -> " << LocalPlayer.get_health() << std::endl;
 
-    const auto pOverlay{Overlay::get_singleton()};
-    std::thread(pOverlay->render).detach();
 };
